@@ -39,6 +39,7 @@ body {
 #bottom-left-section {
     background-color: hsl(179, 62%, 43%);
     display: inline-block;
+    flex: 1;
     width: 50%;
     height: 100%;
     padding: 30px;
@@ -62,23 +63,26 @@ body {
 
 #top-p {
     color: hsl(218, 22%, 67%);
-    line-height: 0.5;
+    line-height: 1;
 }
 
-#price, #price-frequency {
-    display: inline;
+#price-tag {
+    margin: 0;
+    display: flex;
+
 }
 
 #price {
     font-size: 2rem;
+    display: inline-block;
+    margin: 0;
 }
 
 #price-frequency {
-    position: relative;
-    top: -3px;
+    display: inline-block;
     font-size: 0.8rem;
     opacity: 0.7;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 button {
@@ -102,4 +106,17 @@ ul {
     font-size: 0.8rem;
     opacity: 0.8;
     line-height: 1.4;
+}
+
+@media (max-width: 650px) {
+    #container, #top-section, #bottom-section, #bottom-left-section, #bottom-right-section{
+        width: auto;
+        height: auto;
+        overflow: visible;
+        display: grid;
+    }
+
+    #price-tag {
+        margin-left: 0;
+    }
 }
